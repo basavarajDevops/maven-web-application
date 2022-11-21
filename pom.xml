@@ -21,7 +21,7 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://3.110.197.196:9000/</sonar.host.url>
+		<sonar.host.url>http://172.31.38.203:9000/</sonar.host.url>
                 <sonar.login>squ_2f5133ffdeb961c7d7256f02ef1740064e7138c9</sonar.login>
 	
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -98,13 +98,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>CBIgvt Releases Nexus Repository</name>
-	      <url>http://52.66.138.223:8081/repository/CBIgvt-release/</url>
+	      <url>http://172.31.36.252:8081/repository/CBIgvt-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>CBIgvt Snapshot Nexus Repository </name>
-	      <url>http://52.66.138.223:8081/repository/CBIgvt-snapshot/</url>
+	      <url>http://172.31.36.252:8081/repository/CBIgvt-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>

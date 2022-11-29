@@ -12,6 +12,7 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
 
 //Checkout Code State
 stage('CheckoutCode'){
+sendSlackNotifications("STARTED")
 git branch: 'development', credentialsId: '27fd2551-e8d9-4068-a147-f00efd8d6860', url: 'https://github.com/basavarajDevops/maven-web-application.git'
 }
 

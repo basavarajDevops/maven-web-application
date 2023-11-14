@@ -1,0 +1,15 @@
+node{
+    
+def mavenHome = tool name: 'maven3.9.5'
+
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '2', numToKeepStr: '3')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
+//CheckOut Code stage
+stage('CheckOut'){
+    git branch: 'development', credentialsId: '40533b59-b3b4-4457-912c-f34803423875', url: 'https://github.com/basavarajDevops/maven-web-application.git'
+}
+
+//Build satge
+stage('Build'){
+    sh "${mavenHome}/bin/mvn clean package"
+}
+}
